@@ -1,0 +1,16 @@
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Module.Menu.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Module.Menu.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Foundation.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Framework.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Repository.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\LitJSON.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\ICSharpCode.SharpZipLib.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\Newtonsoft.Json.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Foundation.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Framework.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Repository.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\obj\Debug\HC.Module.Menu.csprojResolveAssemblyReference.cache
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\obj\Debug\HC.Module.Menu.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\obj\Debug\HC.Module.Menu.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Ajax.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Menu\bin\Debug\HC.Ajax.pdb

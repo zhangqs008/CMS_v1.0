@@ -1,0 +1,14 @@
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\bin\Debug\HC.Repository.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\bin\Debug\HC.Repository.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\HC.Repository.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\HC.Repository.pdb
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\bin\Debug\HC.Repository.dll
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\bin\Debug\HC.Repository.pdb
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\ResolveAssemblyReference.cache
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\HC.Repository.dll
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\HC.Repository.pdb
+C:\01.QingShan.CMS_v1.0\HC.Repository\bin\Debug\HC.Repository.dll
+C:\01.QingShan.CMS_v1.0\HC.Repository\bin\Debug\HC.Repository.pdb
+C:\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\ResolveAssemblyReference.cache
+C:\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\HC.Repository.dll
+C:\01.QingShan.CMS_v1.0\HC.Repository\obj\Debug\HC.Repository.pdb

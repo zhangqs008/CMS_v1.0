@@ -1,0 +1,14 @@
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\bin\Debug\HC.Enumerations.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\bin\Debug\HC.Enumerations.pdb
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\HC.Enumerations.dll
+G:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\HC.Enumerations.pdb
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\bin\Debug\HC.Enumerations.dll
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\bin\Debug\HC.Enumerations.pdb
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\ResolveAssemblyReference.cache
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\HC.Enumerations.dll
+L:\03.代码专区\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\HC.Enumerations.pdb
+C:\01.QingShan.CMS_v1.0\HC.Enumerations\bin\Debug\HC.Enumerations.dll
+C:\01.QingShan.CMS_v1.0\HC.Enumerations\bin\Debug\HC.Enumerations.pdb
+C:\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\ResolveAssemblyReference.cache
+C:\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\HC.Enumerations.dll
+C:\01.QingShan.CMS_v1.0\HC.Enumerations\obj\Debug\HC.Enumerations.pdb

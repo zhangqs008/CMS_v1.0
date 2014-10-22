@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2250312-1A1C-4977-8624-E717ED660E16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HC.Foundation</RootNamespace>
+    <AssemblyName>HC.Foundation</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\HC.Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON">
+      <HintPath>..\HC.Reference\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\HC.Reference\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\IIdentity\AnonymousAuthenticateIdentity.cs" />
+    <Compile Include="Context\IIdentity\NoAuthenticateIdentity.cs" />
+    <Compile Include="Context\Principal\Administrator.cs" />
+    <Compile Include="Context\Principal\AdministratorService.cs" />
+    <Compile Include="Context\Principal\AdminPrincipal.cs" />
+    <Compile Include="Context\HCContext.cs" />
+    <Compile Include="Cookie\CookieManage.cs" />
+    <Compile Include="EmailService.cs" />
+    <Compile Include="HttpHandlers\FileManagerHandler.cs" />
+    <Compile Include="HttpHandlers\UploadFilesHandler.cs" />
+    <Compile Include="HttpHandlers\VerificationCode\AnimatedGifEncoder.cs" />
+    <Compile Include="HttpHandlers\VerificationCode\GifDecoder.cs" />
+    <Compile Include="HttpHandlers\VerificationCode\LZWEncoder.cs" />
+    <Compile Include="HttpHandlers\VerificationCode\NeuQuant.cs" />
+    <Compile Include="HttpHandlers\VerificationCode\Validate.cs" />
+    <Compile Include="HttpHandlers\VerificationCode\VerifiyCodeHandler.cs" />
+    <Compile Include="HttpModules\AuthModule\AdminAuthModule.cs" />
+    <Compile Include="HttpModules\BaseHttpModule.cs" />
+    <Compile Include="HttpModules\EventOptions.cs" />
+    <Compile Include="HttpModules\HttpCompress\CompressingFilter.cs" />
+    <Compile Include="HttpModules\HttpCompress\DeflateFilter.cs" />
+    <Compile Include="HttpModules\HttpCompress\Enums.cs" />
+    <Compile Include="HttpModules\HttpCompress\GZipFilter.cs" />
+    <Compile Include="HttpModules\HttpCompress\HttpCompressModule.cs" />
+    <Compile Include="HttpModules\HttpCompress\HttpOutputFilter.cs" />
+    <Compile Include="HttpModules\HttpCompress\Settings.cs" />
+    <Compile Include="HttpModules\HttpCompress\WhitespaceFilter.cs" />
+    <Compile Include="HttpModules\Safe360.cs" />
+    <Compile Include="HttpModules\TemplateModule\TemplateModule.cs" />
+    <Compile Include="HttpModules\UrlRewrite\UrlRewriteModule.cs" />
+    <Compile Include="Log\EnumUtility.cs" />
+    <Compile Include="Log\Log.cs" />
+    <Compile Include="Log\LogCategory.cs" />
+    <Compile Include="Log\LogPriority.cs" />
+    <Compile Include="Log\LogService.cs" />
+    <Compile Include="Log\LogType.cs" />
+    <Compile Include="Page\AdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteCache\Enumerations\SiteCacheKey.cs" />
+    <Compile Include="SiteCache\Model\CacheInfo.cs" />
+    <Compile Include="SiteCache\Service\SiteCache.cs" />
+    <Compile Include="SiteConfig\BaseSiteConfig.cs" />
+    <Compile Include="SiteConfig\CDATA.cs" />
+    <Compile Include="SiteConfig\ConfigItem\EmailConfig.cs" />
+    <Compile Include="SiteConfig\ConfigItem\SiteInfo.cs" />
+    <Compile Include="SiteConfig\ConfigItem\UploadFilesConfig.cs" />
+    <Compile Include="SiteConfig\SiteConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HC.Enumerations\HC.Enumerations.csproj">
+      <Project>{AF5BAE39-6B38-4C9E-949B-44B44644379A}</Project>
+      <Name>HC.Enumerations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Framework\HC.Framework.csproj">
+      <Project>{B201201B-B848-4956-B8B6-DC6E34FACEFC}</Project>
+      <Name>HC.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Presentation\HC.Presentation.csproj">
+      <Project>{BCC7F67B-652A-41D1-B67A-E70FB202536D}</Project>
+      <Name>HC.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.Repository\HC.Repository.csproj">
+      <Project>{6B50675B-9446-4A88-8DE2-8B1B7CACCF10}</Project>
+      <Name>HC.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HC.TemplateEngine\HC.TemplateEngine.csproj">
+      <Project>{B82C2326-1EFE-44F9-B08D-E441017B1905}</Project>
+      <Name>HC.TemplateEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
