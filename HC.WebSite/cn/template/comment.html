@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>留言板-${siteconfig.SiteName} </title>$Load("include/head.html")
+</head>
+<body>
+    <div id="home">
+        <div id="header">
+            $Load("include/top.html")
+        </div>
+        <div id="main">
+            <div id="mainContent">
+                <div class="post">
+                    <h1 class="dayTitle">
+                        <span class="cate">留言板</span>
+                    </h1>
+                    <div class="clear">
+                    </div>
+                    <div class="forFlow">
+                        <div class="textguide">
+                            您对本博客有什么好的意见或建议，欢迎给我留言^_^</div>
+                    </div>
+                    <div class="forFlow">
+                        $Load("include/comment.html")
+                    </div>
+                </div>
+            </div>
+            <div id="sideBar">
+                <div id="sideBarMain">
+                    $Load("include/leftBar.html")
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="footer">
+            $Load("include/footer.html")
+        </div>
+    </div>
+</body>
+</html>

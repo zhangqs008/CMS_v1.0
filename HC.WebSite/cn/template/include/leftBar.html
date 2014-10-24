@@ -1,0 +1,32 @@
+﻿<div class="newsItem">
+    <h3 class="catListTitle">
+        欢迎光临,您是第<span class="siteVisitCount">${VisitStatistic.GetVisitCount()}</span>位访客
+    </h3>
+    <div id="blog-news">
+        <div id="profile_block">
+            昵称：清山博客<br>
+            联系： <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=497785609&site=qq&menu=yes">
+                <img style="vertical-align: middle" border="0" src="http://wpa.qq.com/pa?p=2:497785609:51"
+                    alt="点击这里给我发消息" title="点击这里给我发消息" /></a> <a target="_blank" id="addQQGroup" href="http://wp.qq.com/wpa/qunwpa?idkey=b47065dc30f8077e987714efa66ae0484cf71c7a2303924c34961e5ccf288043">
+                        <img style="vertical-align: middle" border="0" src="http://wp.qq.com/images/group.png"
+                            alt="点击这里加入此群" title="点击这里加入此群"></a>
+        </div>
+    </div>
+</div>
+<div class="newsItem">
+    <h3 class="catListTitle">
+        文章分类
+    </h3>
+    <div id="Div2">
+        <div class="filetree treeview" id="browser">
+        </div>
+    </div>
+</div>
+<div class="newsItem">
+    <h3 class="catListTitle">
+        阅读排行
+    </h3>
+    <div id="Div9">
+        ${VisitStatistic.GetTop10Article()}
+    </div>
+</div>

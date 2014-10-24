@@ -1,0 +1,71 @@
+﻿$set(itemId=Request.getint("itemId"))
+$set(Model = Product.GetItem("itemId")) 
+$if(Model.Id>0)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>${Model.Title}-${siteconfig.SiteName} </title>$Load("include/head.html")
+    <meta name="keywords" content="${Model.Title}">
+    <meta name="Description" content="${Model.Title}" />
+</head>
+<body>
+    <link href="${path.BasePath}Style/nobg.css" rel="stylesheet" type="text/css" />
+    <link href="${path.BasePath}Script/syntaxhighlighter_3.0.83/coustom/shCore.css" rel="stylesheet"
+        type="text/css" />
+    <link href="${path.BasePath}Script/syntaxhighlighter_3.0.83/coustom/shThemeDefault.css"
+        rel="stylesheet" type="text/css" />
+    <script src="${path.BasePath}Script/syntaxhighlighter_3.0.83/coustom/syntaxhighlighter.js"
+        type="text/javascript"></script>
+    <div id="home">
+        <div id="header">
+            $Load("include/top.html")
+        </div>
+        <div id="main">
+            <div id="mainContent">
+                <div class="post">
+                    <h1 class="dayTitle">
+                        <a id="cb_post_title_url" class="postTitle2" title='${Model.Title}'>${Model.Title}
+                        </a>
+                    </h1>
+                    <div class="clear">
+                    </div>
+                    <div class="postBody">
+                        <div class="forFlow">
+                            <img src="${Model.MainPic}" alt="${Model.Title}" width="120px" height="150px" style="float: left;
+                                margin-right: 15px;" />
+                            ${Model.Description}
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="forFlow">
+                       $product.prev(itemid)<br />
+                       $product.next(itemid) 
+                      
+                    </div>
+                    <div class="forFlow">
+                        $Load("include/comment.html")
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var clipboardSwf = '/Script/syntaxhighlighter_3.0.83/coustom/clipboard.swf';
+                </script>
+                <script src="/Script/hc.highlight.js" type="text/javascript"></script>
+            </div>
+            <div id="sideBar">
+                <div id="sideBarMain">
+                    $Load("include/leftBar.html")
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="footer">
+            $Load("include/footer.html")
+        </div>
+    </div>
+</body>
+</html>
+$end 

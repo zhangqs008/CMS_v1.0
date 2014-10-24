@@ -1,0 +1,26 @@
+﻿
+body { font-size: 12px; }
+/*
+a:link { color: #444; }
+a:visited { color: #444; }
+a:active { color: #444; }
+a:hover { color: #444; }*/
+a { cursor: pointer; }
+.active { background: #eaf2ff; color: #000000; border: 0px solid #b7d2ff; filter: none; }
+
+.top_left { width: 222px; height: 40px; float: left; padding: 10px; }
+.top_left .logo { width: 120px; height: 60px; margin-top: -16px; margin-left: 2px; font-size: 22px; padding-top: 7px; padding-bottom: -4px; /* font-weight: bold; */ font-family: 微软雅黑; color: rgb(34, 122, 253); }
+.top_left .logo img { /*width: 120px; height: 60px;*/ }
+.top_right { float: left; float: left; margin-top: 30px; margin-left: 7px; }
+.copyright { text-align: center; height: 0px; color: gray; }
+.top_userinfo { position: absolute; float: right; top: 10px; right: 20px; }
+.lbluserName { font-weight: bold; color: brown; }
+
+.main { padding: 1px; }
+.tips { color: green; }
+.edit_table { border: 0px solid #95B8E7; }
+.edit_table td { padding: 3px; }
+.edit_table tr { padding: 3px; }
+.edit_table .td_left { text-align: right; width: 12%; border-left: 0; border-right: 0; border-top: 0; font-weight: normal; background: none; }
+.edit_table .td_right { text-align: left; border-left: 0; font-weight: normal; border-top: 0; background: none; }
+.fieldTips { margin-left: 5px; color: green; }

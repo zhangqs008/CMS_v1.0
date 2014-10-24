@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>网站推荐-${siteconfig.SiteName} </title>$Load("include/head.html")
+</head>
+<body>
+    <style type="text/css">
+        .op { border: 1px solid #08c; background: #08c; color: white !important; padding: 3px 10px; margin: 2px; border-radius: 12px; }
+        .description { padding: 0 10px 10px 10px; }
+        .description p { height: 25px; font-family: sans-serif; }
+        .li_site { padding: 10px; }
+        .li_site p { height: 22px; }
+    </style>
+    <div id="home">
+        <div id="header">
+            $Load("include/top.html")
+        </div>
+        <div id="main">
+            <div id="mainContent">
+                <div class="post">
+                    <h1 class="dayTitle">
+                        <span class="cate">推荐网站</span>
+                    </h1>
+                    <div class="description">
+                        <p style="color: green">
+                            若您的网站需要跟"清山博客"互为友情链接，请在留言板留言或Email至:zhangqs008@163.com</p>
+                    </div>
+                    $set(dt=db.Query("SELECT Id,NAME,Logo as Img,[DESCRIPTION],URL FROM HC_FriendLink
+                    Order by CreateDate Desc"))
+                    <ul>
+                        $foreach(item in dt)
+                        <li class="li_site"><a href="${item.Url}" target="_blank">
+                            <img src="${item.Img}" style="width: 150px; height: 80px;" /><br />
+                            <p style="text-align: center; margin-top: 3px; color: #009999">
+                                $item.Name</p>
+                        </a></li>
+                        $end
+                    </ul>
+                </div>
+            </div>
+            <div id="sideBar">
+                <div id="sideBarMain">
+                    $Load("include/leftBar.html")
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!--end: main -->
+        <div class="clear">
+        </div>
+        <div id="footer">
+            $Load("include/footer.html")
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+body { font-size: 12px; }
+/*
+a:link { color: #444; }
+a:visited { color: #444; }
+a:active { color: #444; }
+a:hover { color: #444; }*/
+a { cursor: pointer; }
+.active { }
+ 
+.navmenu a{ color: white;!important}
+.navmenu a:hover{ color: black;!important}
+.navmenu a span:hover{ color: black;!important}
+
+.top_userinfo a{ color: white;!important}
+.top_userinfo a:hover{ color: black;!important}
+.top_userinfo a span:hover{ color: black;!important}
+
+
+
+.main { padding: 1px; }
+.tips { color: green; }
+.edit_table { border: 0px solid #95B8E7; }
+.edit_table td { padding: 3px; }
+.edit_table tr { padding: 3px; }
+.edit_table .td_left { text-align: right; width: 12%; border-left: 0; border-right: 0; border-top: 0; font-weight: normal; background: none; }
+.edit_table .td_right { text-align: left; border-left: 0; font-weight: normal; border-top: 0; background: none; }
+.fieldTips { margin-left: 5px; color: green; }

@@ -1,0 +1,32 @@
+﻿<script src="${path.BasePath}Script/hc.comment.js" type="text/javascript"></script>
+<div class="comment">
+    <div class="itemComment">
+        <div id="comments">
+        </div>
+        <span id="btnShowAddNew" style="color: #2c879b; cursor: pointer; font-weight: bold">
+            我要留言</span>
+        <dt class="replyBox" id="replyBoxOrg" style="display: none">
+            <div id="divSendMessage">
+                <div class="comment_replyer">
+                    昵称：<input id="txtNewUserName" class="repalyTitle" type="text" placeholder="您的姓名"
+                        value="" />
+                </div>
+                <div class="comment_email">
+                    邮箱：<input id="txtNewEmail" class="repalyEmail" type="text" placeholder="您的邮箱" value="" /><span
+                        style="color: gray">&nbsp;请留下您的邮箱，好及时给您回复。</span>
+                </div>
+                <div class="comment_replycontent">
+                    <textarea id="txtNewComment" style="border: 1px solid #AAC1DE;" cols="80" rows="5"
+                        placeholder="您的评论"></textarea>
+                </div>
+                <div class="comment_replybutton">
+                    <input type="text" id="txtNewVerifiyCode" class="repalyCode" />
+                    <img id="NewVerifiyCode" title='点击换一张' src="${path.BasePath}VerifiyCode.aspx" style="vertical-align: middle"
+                        width="71" height="23" onclick="this.src=this.src+'?'">
+                    <input id="btnAddNew" type="button" value="发表" />
+                    <input id="btnCloseButton" class="btnCloseButton" type="button" value="关闭">
+                </div>
+            </div>
+        </dt>
+    </div>
+</div>

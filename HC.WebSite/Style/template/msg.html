@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{$title}</title>
+    <style type="text/css">
+        body { font-size: 12px; }
+        .head { width: 80%; margin: 10px auto; border: 1px solid gainsboro; padding: 10px; background-color: #F7F7F7; font-size: 14px; font-weight: bold; color: brown; }
+        .content { padding: 50px 10px; text-align: center; width: 80%; margin: 10px auto; border: 1px solid gainsboro; background-color: #F7F7F7; }
+        .footer { width: 80%; margin: 10px auto; border: 1px solid gainsboro; padding: 10px; background-color: #F7F7F7; text-align: center; color: gray; }
+        ul { padding: 0 10px; }
+        li { list-style: none; line-height: 22px; float: left; padding: 8px; border: 1px solid lightgray; margin-left: 10px; }
+        .clear { clear: both; }
+        td, th { border: lightgray solid 1px; }
+        a { text-decoration: none; }
+        th { height: 30px; background-color: lightyellow; }
+        table { border: lightgray solid 1px; border-collapse: collapse; }
+        .editTable { width: 100%; }
+        .td_left { text-align: right; width: 250px; }
+        .td_right { text-align: left; margin-left: 6px; }
+        .tr_btns { }
+        .td_btns { text-align: center; }
+        .input_text { border: 1px solid lightgray; padding: 3px; margin: 3px; height: 16px; background-color: white; z-index: 6; left: 0px; outline: none; }
+    </style>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="TagEdit.aspx" id="aspnetForm">
+    <div class="head">
+        {$title}
+    </div>
+    <div class="content">
+        {$content}
+        <br />
+        <br />
+        <br />
+        <br />
+        {$url}
+    </div>
+    <div class="footer">
+        <a style="color: gray" href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备14030001号-2</a>
+    </div>
+    </form>
+</body>
+</html>

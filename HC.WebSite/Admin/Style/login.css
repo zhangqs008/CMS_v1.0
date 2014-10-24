@@ -1,0 +1,20 @@
+﻿
+/*首页样式*/
+body { margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; background-color: #1D3647; }
+p { margin: 0; }
+td { height: 25px; }
+.login_top_bg { background-image: url(Images/login-top-bg.gif); background-repeat: repeat-x; }
+.login_bg { background-image: url(Images/login_bg.jpg); background-repeat: repeat-x; }
+.login-buttom-bg { background-image: url(Images/login-buttom-bg.gif); background-repeat: repeat-x; }
+.login_bg2 { background-image: url(Images/login-content-bg.gif); background-repeat: no-repeat; background-position: right; }
+.login_bg2 td, .login_bg2 tr { margin: 0; }
+.login-buttom-txt { font-family: Arial, Helvetica, sans-serif; font-size: 10px; color: #ABCAD3; text-decoration: none; line-height: 20px; }
+.login_txt_bt { font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 25px; color: #666666; font-weight: bold; }
+.left_txt { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 25px; color: #666666; }
+table { white-space: normal; line-height: normal; font-weight: normal; font-size: medium; font-variant: normal; font-style: normal; color: -webkit-text; text-align: start; }
+.login_txt { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 25px; color: #333333; }
+.top_hui_text_left { text-align: right;height: 30px!important; }
+.top_hui_text_right { text-align: left; }
+.input_text { border: 1px solid lavender; height: 22px; padding-left: 6px; }
+.left_blank { width: 35%; }
+.right_blank{ width: 4%;}

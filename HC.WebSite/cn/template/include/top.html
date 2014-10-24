@@ -1,0 +1,41 @@
+﻿<div id="blogTitle">
+    <h1>
+        <a id="Header1_HeaderTitle" class="headermaintitle" href="/" style="color: black">${siteconfig.SiteName}
+        </a>
+    </h1>
+    <h2>
+        ${siteconfig.Sign}
+        <div class="searchbox">
+            <input type="text" id="txtKeyword" />
+            <input type="button" style="padding: 2px 10px;" id="btnSearch" value="搜索" />
+            <input type="button" style="padding: 2px 10px;" onclick="javascript:window.location.href='${path.BasePath}Search'"
+                id="Button1" value="全文检索" />
+        </div>
+        <div class="sitetheme">
+            <ul>
+                <li class="theme_color" style="background-color: #08c"></li>
+                <li class="theme_color" style="background-color: #7AC33D"></li>
+                <li class="theme_color" style="background-color: #1DA8C9"></li>
+                <li class="theme_color" style="background-color: #F68022"></li>
+                <li class="theme_color" style="background-color: #F040A9"></li>
+                <li class="theme_color" style="background-color: #6FD513"></li>
+            </ul>
+        </div>
+    </h2>
+</div>
+<div id="navigator">
+    <ul id="navList">
+        <li><a id="MyLinks1_HomeLink" class="menu" href="${path.BasePath}index">首页</a></li>
+        <li><a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="/About">关于博客</a></li>
+        <li><a class="menu" href="${path.BasePath}Comment">留言板</a></li>
+        <li><a class="menu" target="_blank" href="${path.BasePath}Search">全文检索</a></li>
+        <!--    <li><a class="menu" href="${path.BasePath}tools">在线工具</a></li>-->
+        <li><a class="menu" href="${path.BasePath}books">交换苹果</a><sup></sup></li>
+        <li><a class="menu" href="${path.BasePath}Recommend">推荐网站</a></li>
+        <li><a class="menu" href="${path.BasePath}VisitStatistics">访问记录</a></li>
+        <li><a class="menu" href="${path.BasePath}admin">后台管理</a></li>
+    </ul>
+    <div class="blogStats">
+        文章- ${Article.GetArticleCount()}&nbsp; 评论- ${visitStatistic.GetCommentCount()}&nbsp;
+    </div>
+</div>

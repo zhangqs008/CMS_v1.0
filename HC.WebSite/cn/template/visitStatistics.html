@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>访问记录-${siteconfig.SiteName} </title>$Load("include/head.html")
+</head>
+<body>
+    <div id="home">
+        <div id="header">
+            $Load("include/top.html")
+        </div>
+        <div id="main">
+            <div id="mainContent">
+                <div class="post">
+                    <h1 class="dayTitle">
+                        <span class="cate">访问记录</span>
+                    </h1>
+                    <div class="clear">
+                    </div>
+                    <div class="forFlow">
+                        <!--表头模板 -->
+                        <script id="userHeaderTemplate" type="text/x-jsrender">
+	                            <thead>
+                                            <tr> 
+                                                <th  sort="number" style="min-width:3%;"> Id</th>
+                                                <th  sort="string" style="min-width:10%;">页面路径</th> 
+                                                <th  sort="string" style="min-width:10%;">访问者</th>
+                                                <th  sort="string" style="min-width:10%;">IP</th>
+                                                <th  sort="string" style="min-width:10%;">所在城市</th>
+                                                <th  sort="string" style="min-width:10%;">浏览器</th>
+                                                <th  sort="string" style="min-width:10%;">访问时间</th> 
+                                            </tr>
+                               </thead>
+                        </script>
+                        <!--数据模板-->
+                        <script id="userDataTemplate" type="text/x-jsrender">
+	                        <tr class="{{:#index%2 ? 'even' : 'odd'}}"> 
+		                          <td>{{>Id}}</td>
+                                  <td><a style="color:#2c879b" target="_blank" href="{{>Url}}">{{>Url}}</a></td> 
+                                  <td>{{>CreateUser}}</td> 
+                                  <td>{{>IP}}</td> 
+                                  <td>{{>City}}</td>  
+                                  <td>{{>Broswer}}</td>  
+                                  <td style="text-align: center;">{{>CreateDate}}</td>  
+	                        </tr>
+                        </script>
+                        <!--无数据模板-->
+                        <script id="userNoDataTemplate" type="text/x-jsrender">
+	                        <tr>
+		                        <td colspan="7" style="height: 25px;text-align: center;background-color: lightgoldenrodyellow;"> 暂无任何数据</td>           
+	                        </tr>
+                        </script>
+                        <script type="text/javascript">
+
+                            //列表页配置
+                            var options = {
+                                pageIndex: 1, //当前页码
+                                pageSize: 10, //分页大小
+                                handler: "VisitStatisticsHandler.GetPageList", //处理程序
+                                tableHeaderTemplate: "userHeaderTemplate", //表头模板
+                                tableDataTemplate: "userDataTemplate", //表数据模板
+                                tableNoDataTemplate: "userNoDataTemplate", //无数据模板
+                                table: "#listTable", //表格Dom元素，可以不传
+                                pager: "#pager", //分页Dom元素
+                                params: {}, //自定义查询参数
+                                callback: null
+                            };
+
+                            $(function () {
+                                //初始化数据 
+                                $("#listTable").ajaxPage(options);
+                            });  
+                        </script>
+                        <div class="item_search">
+                            <table border="0" cellspacing="0" class="searchTable" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="td_left" style="width: 80px; text-align: right">
+                                            查询条件：
+                                        </td>
+                                        <td class="td_right">
+                                            <select id="searchType" style="width: 120px">
+                                                <option value="Url" selected="selected">页面路径</option>
+                                                <option value="CreateUser">访问者</option>
+                                                <option value="IP">IP</option>
+                                                <option value="City">城市</option>
+                                                <option value="Broswer">浏览器</option>
+                                            </select>
+                                            <input type="text" class="input_text" style="width: 200px" title="" id="txtKy" />
+                                            <input type="button" id="btnSearchList" onclick="javascript:search()" value="查询"
+                                                class="btn" />
+                                            <script type="text/javascript">
+                                                $(function () {
+
+                                                    //回车立即搜索
+                                                    $("#txtKy").bind('keydown', function (e) {
+                                                        var key = e.which;
+                                                        if (key == 13) {
+                                                            e.preventDefault();
+                                                            search();
+                                                        }
+                                                    });
+                                                });
+                                                //执行搜索
+                                                function search() {
+                                                    //重置分页 
+                                                    history.pushState({}, document.title, document.URL.replace(/(#)*page=\d+/g, ""));
+                                                    var type = $("#searchType").val();
+                                                    options.params = { type: type, value: $("#txtKy").val().replace(/，/g, ",") };
+                                                    $("#listTable").ajaxPage(options);
+                                                }
+                                            </script>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="userList" class="item_list">
+                            <table id="listTable" class="listTable">
+                            </table>
+                            <div class="pagerDiv">
+                                <div id="pager" class="pagination Pages">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="forFlow">
+                    </div>
+                </div>
+            </div>
+            <div id="sideBar">
+                <div id="sideBarMain">
+                    $Load("include/leftBar.html")
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div id="footer">
+            $Load("include/footer.html")
+        </div>
+    </div>
+</body>
+</html>

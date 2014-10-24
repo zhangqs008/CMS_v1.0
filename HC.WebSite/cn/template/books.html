@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>交换苹果-${siteconfig.SiteName} </title>
+    <!--加载头部-->
+    $Load("include/head.html")
+</head>
+<!--分页大小-->
+$set(pagesize=24)
+<!--当前页-->
+$set(currentPage=Request.GetInt("page",1))
+<body>
+    <style type="text/css">
+        .op { border: 1px solid #08c; background: #08c; color: white !important; padding: 3px 10px; margin: 2px; border-radius: 12px; }
+        .description { padding: 0 10px 10px 10px; }
+        .description p { height: 25px; font-family: sans-serif; }
+        .li_site { padding: 10px; }
+        .li_site p { height: 22px; }
+    </style>
+    <div id="home">
+        <div id="header">
+            <!--加载顶部-->
+            $Load("include/top.html")
+        </div>
+        <div id="main">
+            <div id="mainContent">
+                <div class="post">
+                    <h1 class="dayTitle">
+                        <span class="cate">交换苹果</span>
+                    </h1>
+                    <div class="description">
+                        <p style="color: green">
+                            “你我是朋友，各拿一个苹果来交换，交换后仍然是各有一个苹果；倘若你有一种思想，我也有一种思想，把各自思想相互交流，那么每个人就有两种思想了。”</p>
+                        <p>
+                            如果您有一堆读过的书，闲放在书架上，为了充分利用资源，那我们交换吧^_^，下面是我目前用来交换的书：</p>
+                    </div>
+                    <!--分页查询语句-->
+                    $set(sql="SELECT * FROM (SELECT *, ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNum
+                    FROM HC_Shop_Product )tempTable WHERE tempTable.RowNum BETWEEN "+(currentPage-1)*pagesize+"
+                    AND "+(currentPage)*pagesize+" ORDER BY Id DESC")
+                    <!--列表-->
+                    $set(dt=db.Query(sql))
+                    <ul>
+                        $foreach(item in dt)
+                        <li class="li_site"><a href="${path.BasePath}BookItem?itemId=${item.Id}&type=book" target="_blank">
+                            <img src="${item.MainPic}" style="width: 120px; height: 150px;" /><br />
+                            <p style="text-align: center; margin-top: 3px; color: #009999" title="${item.Title}">
+                                ${str.substr(item.Title,10)}</p>
+                            <p style="text-align: center; margin-top: 3px; color: #009999">
+                                <a class="op" href="${path.BasePath}BookItem?itemId=${item.Id}&type=book">简介</a> <a class="op"
+                                    href="javascript:AlertErrorMsg('若您有换书意向，可以在图书内容页给我留言')">交换</a></p>
+                        </a></li>
+                        $end
+                    </ul>
+                    <div class="clear">
+                    </div>
+                    $pager.init("SELECT count(*) FROM HC_Shop_Product",currentPage,pagesize)
+                </div>
+            </div>
+            <div id="sideBar">
+                <div id="sideBarMain">
+                    $Load("include/leftBar.html")
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!--end: main -->
+        <div class="clear">
+        </div>
+        <div id="footer">
+            $Load("include/footer.html")
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="HC.WebSite.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        var _basepath = "<%= BasePath %>";
+        var _theme = "<%= CustomTheme %>"; 
+    </script>
+    <link rel="stylesheet" type="text/css" href="<%= "" + BasePath %>Admin/Scripts/jquery-easyui-1.4/themes/<%=CustomTheme %>/easyui.css">
+    <link rel="stylesheet" type="text/css" href="<%= "" + BasePath %>Admin/Scripts/jquery-easyui-1.4/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="<%= "" + BasePath %>Admin/Style/common.css" />
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/jquery-easyui-1.4/jquery.min.js"> </script>
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/jquery-easyui-1.4/jquery.easyui.min.js"> </script>
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/jquery-easyui-1.4/locale/easyui-lang-zh_CN.js"> </script>
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/hc.hit.js"></script>
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/hc.ajax.js"> </script>
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/hc.resize.js"> </script>
+    <script type="text/javascript" src="<%= BasePath %>Admin/Scripts/hc.loading.js"> </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="easyui-layout">
+    <form id="form1" runat="server">
+    <div class="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
